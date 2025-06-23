@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Calculator - OTP</title>
+</head>
+<body>
+    <h1>Welcome to the BMI Calculator</h1>
+    <p>Your OTP is: <strong>{{ otp }}</strong></p>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="/verify">
+        <label>Enter OTP:</label>
+        <input type="number" name="otp" required>
+        <button type="submit">Verify</button>
+    </form>
+</body>
+</html>

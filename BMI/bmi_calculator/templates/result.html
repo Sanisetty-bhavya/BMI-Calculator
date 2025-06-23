@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Result</title>
+</head>
+<body>
+    <h1>Your BMI Details</h1>
+    <table border="1">
+        {% for detail in details %}
+        <tr>
+            <td>{{ detail[0] }}</td>
+            <td>{{ detail[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/diseases">Learn About Diseases</a> | <a href="/exit">Exit</a>
+</body>
+</html>
